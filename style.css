@@ -65,7 +65,8 @@ select {
   outline: 0;
   color: black;
 }
-input[type="number"] {
+input[type="number"],
+input[type="text"] {
   width: 80%;
   font-size: 1.1rem;
   border: none;
@@ -75,6 +76,7 @@ input[type="number"] {
   box-shadow: 0 1px 1px black;
 }
 select {
+  text-transform: capitalize;
   font-size: 1.2rem;
 }
 option {
@@ -113,7 +115,8 @@ option {
     font-size: 1.2rem;
     margin: 0.4rem 0;
   }
-  input[type="number"] {
+  input[type="number"],
+  input[type="text"] {
     width: 100%;
   }
   .count {

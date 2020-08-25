@@ -65,13 +65,13 @@ const setVsFromMaterial = () => {
 const calculateN = () => {
   n = (vs * 1000) / (3.14 * dc);
   n = n.toFixed(1);
-  document.getElementById("n").value = n;
+  document.getElementById("n").value = `${n} RPM`;
 };
 // calculate vf (fz*z*n)
 const calculateVf = () => {
   vf = fz * z * n;
   vf = vf.toFixed(1);
-  document.getElementById("vf").value = vf;
+  document.getElementById("vf").value = `${vf} M/MIN`;
 };
 
 // final count
@@ -79,14 +79,6 @@ document.getElementById("count").addEventListener("click", () => {
   // setVsFromMaterial();
   calculateN();
   calculateVf();
-  console.log(`fz = ${fz}
-    material = ${material}
-    dc = ${dc}
-    vs = ${vs}
-    z = ${z}
-    n = ${n}
-    vf = ${vf}
-    `);
 });
 // reset
 document.getElementById("reset").addEventListener("click", () => {
