@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+        <title>Kalkulator Do Frezarki</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- <h1>Kalkulator Do Frezarki</h1> -->
+            <h2 class="title">Wybierz Frez</h2>
+            <form class="data frez" id="frez">
+                <label for="hss">Stal HSS <input type="radio" id="hss" name="frez" value="0.2">
+                </label>
+                <label for="vhm">Weglik VHM <input type="radio" id="vhm" name="frez" value="0.02">
+                </label>
+            </form>
+            <h2 class="title">Wybierz Material</h2>
+            <form class="data material" id="material">
+                <select name="materials" id="materials">
+                    <option value=""></option>
+                    <option value="miekkie">drewno miekkie</option>
+                    <option value="sklejka">drewno twarde/sklejka</option>
+                    <option value="wiorowe">plyty wiorowe</option>
+                    <option value="plesniowe">plyty plesniowe</option>
+                    <option value="alumczysty">aluminium czysty</option>
+                    <option value="alumstop">aluminium stopy</option>
+                </select>
+            </form>
+            <h2 class="title">Wprowadz Dane</h2>
+            <div class="data data-input">
+                <label for="dc">Srednica Freza - Dc - mm</label>
+                <input type="number" name="dc" id="dc">
+                <label for="z">Liczba Zebow - Z - szt</label>
+                <input type="number" name="z" id="z">
+            </div>
+            <h2 class="title">Pod Material i Frez</h2>
+            <div class="data data-output">
+                <label for="vs">Predkosc Skrawania - Vs - mm</label>
+                <input type="number" name="vs" id="vs">
+                <label for="fz">Posuw na zab - Fz - mm/zab</label>
+                <input type="number" name="fz" id="fz">
+                <h2 class="title">Wynik</h2>
+                <label for="n">Predkosc Wrzeciona - N - rpm</label>
+                <input type="number" name="n" id="n">
+                <label for="vf">Predkosc Posuwu - Vf - m/min</label>
+                <input type="number" name="vf" id="vf">
+            </div>
+            <div class="buttons">
+                <button id="count" class="count">Oblicz</button>
+                <button id="reset" class="count">Reset</button>
+            </div>
+        </div>
+
+        <script src="/app.js"></script>
+    </body>
+
+</html>
