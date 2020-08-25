@@ -86,3 +86,16 @@ document.getElementById("count").addEventListener("click", () => {
     `);
 });
 // reset
+document.getElementById("reset").addEventListener("click", () => {
+  document.getElementById("frez").reset();
+  document.getElementById("material").reset();
+  document.querySelectorAll(".input").forEach((input) => {
+    input.value = 0;
+  });
+  fz = 0;
+  vs = 0;
+  dc = 0;
+  z = 0;
+  n = 0;
+  vf = 0;
+});
