@@ -11,11 +11,15 @@ document.getElementById("frez").addEventListener("change", (e) => {
   const input = document.getElementById("fz");
   fz = parseFloat(e.target.value);
   input.value = fz;
+  setVsFromMaterial();
 });
 
 // set material
 document.getElementById("material").addEventListener("change", (e) => {
   material = e.target.value;
+  setVsFromMaterial();
+  const input = document.getElementById("vs");
+  input.value = vs;
 });
 // set dc in mm
 document.getElementById("dc").addEventListener("change", (e) => {
@@ -57,7 +61,6 @@ const setVsFromMaterial = () => {
   }
   input.value = vs;
 };
-// read fz from frez
 // calculate n (vs*1000) / (3.14*dc)
 const calculateN = () => {
   n = (vs * 1000) / (3.14 * dc);
@@ -73,7 +76,7 @@ const calculateVf = () => {
 
 // final count
 document.getElementById("count").addEventListener("click", () => {
-  setVsFromMaterial();
+  // setVsFromMaterial();
   calculateN();
   calculateVf();
   console.log(`fz = ${fz}
