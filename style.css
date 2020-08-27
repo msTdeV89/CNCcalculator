@@ -49,6 +49,11 @@ h1 {
   text-transform: uppercase;
 }
 
+hr {
+  width: 100%;
+  border: 2px solid black;
+}
+
 .data {
   display: flex;
   flex-direction: column;
@@ -59,6 +64,11 @@ h1 {
   width: 100%;
   justify-content: space-evenly;
 }
+
+.result {
+  font-weight: bold;
+}
+
 input,
 option,
 select {
@@ -101,6 +111,11 @@ option {
   border-radius: 0.4rem;
 }
 
+input[type="number"].emptyInput {
+  /* border: 3px solid red; */
+  background: rgba(255, 0, 0, 0.8);
+  transition: 0.2s;
+}
 @media (min-width: 900px) {
   .container {
     max-height: 90vh;
@@ -118,6 +133,7 @@ option {
   input[type="number"],
   input[type="text"] {
     width: 100%;
+    margin-bottom: 1rem;
   }
   .count {
     padding: 0.5rem;

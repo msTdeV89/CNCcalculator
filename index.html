@@ -14,9 +14,9 @@
             <!-- <h1>Kalkulator Do Frezarki</h1> -->
             <h2 class="title">Wybierz Frez</h2>
             <form class="data frez" id="frez">
-                <label for="hss">Stal HSS <input type="radio" id="hss" name="frez" value="0.2">
+                <label for="hss">Stal HSS <input type="radio" id="hss" name="frez" value="hss">
                 </label>
-                <label for="vhm">Weglik VHM <input type="radio" id="vhm" name="frez" value="0.02">
+                <label for="vhm">Weglik VHM <input type="radio" id="vhm" name="frez" value="vhm">
                 </label>
             </form>
             <h2 class="title">Wybierz Material</h2>
@@ -26,9 +26,10 @@
                     <option value="miekkie">drewno miekkie</option>
                     <option value="sklejka">drewno twarde/sklejka</option>
                     <option value="wiorowe">plyty wiorowe</option>
-                    <option value="plesniowe">plyty plesniowe</option>
+                    <option value="pilsniowe">płyty pilsniowe</option>
                     <option value="alumczysty">aluminium czysty</option>
                     <option value="alumstop">aluminium stopy</option>
+                    <option value="plastik">tworzywa sztuczne</option>
                 </select>
             </form>
             <h2 class="title">Wprowadz Dane</h2>
@@ -38,17 +39,16 @@
                 <label for="z">Liczba Zebow - Z - szt</label>
                 <input type="number" class="input" name="z" id="z">
             </div>
-            <h2 class="title">Pod Material i Frez</h2>
+            <hr>
             <div class="data data-output">
                 <label for="vs">Predkosc Skrawania - Vs - mm</label>
                 <input type="number" class="input" name="vs" id="vs">
                 <label for="fz">Posuw na zab - Fz - mm/zab</label>
                 <input type="number" class="input" name="fz" id="fz">
-                <h2 class="title">Wynik</h2>
                 <label for="n">Predkosc Wrzeciona - N - rpm</label>
-                <input type="text" class="input" name="n" id="n">
-                <label for="vf">Predkosc Posuwu - Vf - m/min</label>
-                <input type="text" class="input" name="vf" id="vf">
+                <input type="text" class="result input" name="n" id="n">
+                <label for="vf">Predkosc Posuwu - Vf - mm/min</label>
+                <input type="text" class="result input" name="vf" id="vf">
             </div>
             <div class="buttons">
                 <button id="count" class="count">Oblicz</button>
